@@ -3,6 +3,7 @@
 use std::fs;
 
 fn main() {
+
     // PART 1
     let input = fs::read_to_string("../Inputs/day01input.txt").expect("Error");
     let list: Vec<u32> = input.chars().map(|c| c.to_digit(10).unwrap()).collect();
@@ -16,8 +17,7 @@ fn main() {
 
     println!("{}", sum);
 
-    //PART 2
-
+    // PART 2
     sum = 0;
     let half: u32 = (list.len() / 2).try_into().unwrap();
     let length: u32 = (list.len()).try_into().unwrap();
